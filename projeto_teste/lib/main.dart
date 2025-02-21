@@ -33,7 +33,6 @@ class Home extends StatelessWidget {
       Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-        Image.network('https://docs.flutterflow.io/assets/images/row-main-axis-51a849d58cd39f3daaf64557e0845bcb.png'),
         Text('Discover Orientation Widgets.',style: TextStyle(fontSize: 20),),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
