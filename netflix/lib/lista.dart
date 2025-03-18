@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/detalhes.dart';
 
 class Filme{
   final String Nome;
   final String genero;
   final String imagem;
-
+  final String descricao;
   Filme({
     required this.Nome,
     required this.genero, 
     required this.imagem,
+    this.descricao = '',
     
   
 
@@ -24,11 +26,15 @@ class ListaPage extends StatelessWidget {
   Filme(
     Nome:'Vingadores',
     genero: 'Ação',
-    imagem: 'assets/images/vingadores.jpg'
+    imagem: 'assets/images/vingadores.jpg',
+    descricao: 'Um monte de gente se socando'
   ),
   Filme(Nome: 'Toy Story',
   genero: 'Animação',
-  imagem: 'assets/images/toystory.jpg')
+  imagem: 'assets/images/toystory.jpg',
+  descricao: 'Um monte de boneco falante'
+  
+  )
 
 
   ];
@@ -42,8 +48,13 @@ class ListaPage extends StatelessWidget {
       ListView.builder(
         itemCount: lista_filmes.length ,
         itemBuilder:  (context,index) {
-          return
-           Container(
+          return  GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+            MaterialPageRoute
+            (builder:(context)=>DetalhesFilmePage(filme: lista_filmes[index])));
+          },
+          child:Container(
           color: Colors.black,
           width: 200,
           height: 500,
@@ -57,7 +68,11 @@ class ListaPage extends StatelessWidget {
           )
 
           
-            );
+            )
+          );
+
+
+           
         }
         
         
