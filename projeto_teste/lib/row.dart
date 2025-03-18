@@ -32,9 +32,28 @@ class RowExample extends StatelessWidget {
               },
               child: const Text('Voltar para Column'),
             ),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Home(),));
-            }, child: Text( 'Home'))
+            ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Home()),
+    );
+  },
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.orange, // Cor de fundo do botão
+    foregroundColor: Colors.white, // Cor do texto
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12), // Bordas arredondadas
+    ),
+    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24), // Espaçamento interno
+    elevation: 5, // Sombra do botão
+  ),
+  child: Text(
+    'Home',
+    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+  ),
+)
+
             ],
 
           ),
