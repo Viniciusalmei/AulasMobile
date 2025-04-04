@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897830940453",
+    "project_id": "climateste",
+    "storage_bucket": "climateste.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897830940453:android:07c83c308029026595b4cc",
+        "android_client_info": {
+          "package_name": "com.firebase.firebaseapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCnZFZ0zrq736LxmHTDSHvpG5--vYhxR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
