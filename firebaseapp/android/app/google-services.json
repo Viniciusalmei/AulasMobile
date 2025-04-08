@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "897830940453",
-    "project_id": "climateste",
-    "storage_bucket": "climateste.firebasestorage.app"
+    "project_number": "365849475683",
+    "project_id": "climaapp-ffe90",
+    "storage_bucket": "climaapp-ffe90.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:897830940453:android:07c83c308029026595b4cc",
+        "mobilesdk_app_id": "1:365849475683:android:822b675fa4b08af0695656",
         "android_client_info": {
           "package_name": "com.firebase.firebaseapp"
         }
@@ -15,7 +15,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDCnZFZ0zrq736LxmHTDSHvpG5--vYhxR0"
+          "current_key": "AIzaSyAveA3-qzoHwHudX600vmeVQnypr51AxJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365849475683:android:57cb8faadf17b79f695656",
+        "android_client_info": {
+          "package_name": "com.firebase2.flutter_application_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAveA3-qzoHwHudX600vmeVQnypr51AxJM"
         }
       ],
       "services": {

@@ -53,10 +53,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDCnZFZ0zrq736LxmHTDSHvpG5--vYhxR0',
-    appId: '1:897830940453:android:07c83c308029026595b4cc',
-    messagingSenderId: '897830940453',
-    projectId: 'climateste',
-    storageBucket: 'climateste.firebasestorage.app',
+    apiKey: 'AIzaSyAveA3-qzoHwHudX600vmeVQnypr51AxJM',
+    appId: '1:365849475683:android:822b675fa4b08af0695656',
+    messagingSenderId: '365849475683',
+    projectId: 'climaapp-ffe90',
+    storageBucket: 'climaapp-ffe90.firebasestorage.app',
   );
+
 }

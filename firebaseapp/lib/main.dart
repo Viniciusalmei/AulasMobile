@@ -1,4 +1,5 @@
 import 'package:firebaseapp/clima.dart';
+import 'package:firebaseapp/navigation.dart';
 
 
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.lightBlue[50],
         
       ),
-      home: HomeScreen(),
+      home: NavApp(),
     );
   }
 }
