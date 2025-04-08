@@ -16,7 +16,41 @@ class _ClimateHistoryScreenState extends State<ClimateHistoryScreen> {
     return Scaffold(
 
     body: StreamBuilder<QuerySnapshot>
-    (stream: stream, builder: builder)
+    (stream: FirebaseFirestore.instance.collection('Monte Mor').snapshots(),
+     builder: (context,snapshot){
+      if (snapshot.connectionState == ConnectionState.waiting){
+        return Center(
+          child: CircularProgressIndicator()
+        );
+      }
+      if(!snapshot.hasData || snapshot.data!.docs.isEmpty){
+        return Center(child: Text('Nao tem dado dispónivel'));
+      }
+
+      var dataList = snapshot.data!.docs;
+
+      return ListView.builder(itemCount: dataList.length,
+      itemBuilder: (context,index){
+        var data = dataList[index].data() as Map<String, dynamic>;
+
+        double temperature = (data['temperature'] ?? 0).toDouble();
+        double humidity = (data['humidity'] ?? 0).toDouble();
+
+        return Card(
+        margin: EdgeInsets.symmetric(horizontal: 16,vertical:8),
+        child: ListTile(
+          title: Text('Temperatura: $temperature ºC'),
+          subtitle: Text('Humidade $humidity %'),
+          leading: Icon(Icons.thermostat),
+          
+          
+        )
+
+        );
+      },
+      );
+
+     })
     
     );
   }

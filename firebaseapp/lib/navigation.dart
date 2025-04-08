@@ -19,7 +19,7 @@ class _NavAppState extends State<NavApp> {
     static List<Widget> _widgetOptions = <Widget> [  //Lista das nossas telas.
       HomeScreen(),
       ClimateScreen(),
-   
+      ClimateHistoryScreen()
       
 
     ];
@@ -47,6 +47,10 @@ class _NavAppState extends State<NavApp> {
             ),
             BottomNavigationBarItem(icon: Icon(Icons.cloud),
             label: 'Monitoramento',
+            backgroundColor: Colors.cyan
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.history),
+            label: 'Historico',
             backgroundColor: Colors.cyan
             ),
            
