@@ -1,6 +1,7 @@
 import 'package:firebaseapp/clima.dart';
 import 'package:firebaseapp/history.dart';
 import 'package:firebaseapp/main.dart';
+import 'package:firebaseapp/post.dart';
 import 'package:flutter/material.dart';
 
 
@@ -19,7 +20,7 @@ class _NavAppState extends State<NavApp> {
     static List<Widget> _widgetOptions = <Widget> [  //Lista das nossas telas.
       HomeScreen(),
       ClimateScreen(),
-      ClimateHistoryScreen()
+      ClimateHistoryScreen(),
       
 
     ];
@@ -52,7 +53,8 @@ class _NavAppState extends State<NavApp> {
             BottomNavigationBarItem(icon: Icon(Icons.history),
             label: 'Historico',
             backgroundColor: Colors.cyan
-            ),
+            )
+             
            
             
 
