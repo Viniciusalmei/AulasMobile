@@ -1,6 +1,7 @@
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebaseapp/put.dart';
 
 import 'package:flutter/material.dart';
 
@@ -34,22 +35,36 @@ class _ClimateHistoryScreenState extends State<ClimateHistoryScreen> {
       itemBuilder: (context,index){
         var data = dataList[index].data() as Map<String, dynamic>;
                         //adicionar variavel doc
-        double temperature = (data['temperature'] ?? 0).toDouble();
-        double humidity = (data['humidity'] ?? 0).toDouble();
+        double temperature_historico = (data['temperature'] ?? 0).toDouble();
+        double humidity_historico = (data['humidity'] ?? 0).toDouble();
+        var doc = dataList[index];
 
+        return GestureDetector(//adiciona função ao clicar em algo.
+          onTap: () {// onTap (quando clicar)
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> //navega para outra tela.
+            PutClimateScreen(
+              documentId: doc.id,   //atributos para construir a tela PutClimate.
+              initialTemperature: temperature_historico, 
+              initialHumidity: humidity_historico))
+           );
 
-        return 
-          Card(
-        margin: EdgeInsets.symmetric(horizontal: 16,vertical:8),
-        child: ListTile(
-          title: Text('Temperatura: $temperature ºC'),
-          subtitle: Text('Humidade $humidity %'),
+          },
+          child:Card(
+          margin: EdgeInsets.symmetric(horizontal: 16,vertical:8),
+          child: ListTile(
+          title: Text('Temperatura: $temperature_historico ºC'),
+          subtitle: Text('Humidade $humidity_historico %'),
           leading: Icon(Icons.thermostat),
+          trailing: IconButton(onPressed: , icon: Icon(Icons.delete)),
           
           
         )
 
+        )
+
         );
+        
+        
         
       
       },

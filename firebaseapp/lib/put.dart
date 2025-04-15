@@ -31,11 +31,32 @@ class _PutClimateScreenState extends State<PutClimateScreen> {
   ScaffoldMessenger.of(context).showSnackBar(//notificacao que avisa que os dados foram entregue.
     SnackBar(content: Text('Dados enviados com sucesso!'))
   );
+
+  Navigator.pop(context);
   
   }//funcao future 
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: Text('Tela de Alteração de dados')),
+
+      body: Column(children: [
+        TextField(
+          controller: temperatureController, //variavel que visualiza as informacoes 
+          keyboardType: TextInputType.number, //tipo de teclado para o usuario inserir dados.
+          decoration: InputDecoration(labelText: 'Insira sua temperatura'), // mensagem para o usuario inserir os dados.
+        ),
+        TextField(
+          controller: humidityController, //variavel que visualiza as informacoes 
+          keyboardType: TextInputType.number, //tipo de teclado para o usuario inserir dados.
+          decoration: InputDecoration(labelText: 'Insira sua umidade'), // mensagem para o usuario inserir os dados.
+
+        ),
+        ElevatedButton(onPressed: updateClimate, child: Text('Alterar')),//envia os dados da função
+
+
+      ],)
+    );
   }
 }
