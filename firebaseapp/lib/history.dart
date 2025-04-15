@@ -1,6 +1,7 @@
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:flutter/material.dart';
 
 class ClimateHistoryScreen extends StatefulWidget {
@@ -32,11 +33,13 @@ class _ClimateHistoryScreenState extends State<ClimateHistoryScreen> {
       return ListView.builder(itemCount: dataList.length,
       itemBuilder: (context,index){
         var data = dataList[index].data() as Map<String, dynamic>;
-
+                        //adicionar variavel doc
         double temperature = (data['temperature'] ?? 0).toDouble();
         double humidity = (data['humidity'] ?? 0).toDouble();
 
-        return Card(
+
+        return 
+          Card(
         margin: EdgeInsets.symmetric(horizontal: 16,vertical:8),
         child: ListTile(
           title: Text('Temperatura: $temperature ºC'),
@@ -47,6 +50,8 @@ class _ClimateHistoryScreenState extends State<ClimateHistoryScreen> {
         )
 
         );
+        
+      
       },
       );
 

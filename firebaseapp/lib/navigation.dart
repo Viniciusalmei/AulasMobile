@@ -21,6 +21,7 @@ class _NavAppState extends State<NavApp> {
       HomeScreen(),
       ClimateScreen(),
       ClimateHistoryScreen(),
+      PostClimateScreen(),
       
 
     ];
@@ -52,6 +53,10 @@ class _NavAppState extends State<NavApp> {
             ),
             BottomNavigationBarItem(icon: Icon(Icons.history),
             label: 'Historico',
+            backgroundColor: Colors.cyan
+            ),
+             BottomNavigationBarItem(icon: Icon(Icons.add),
+            label: 'Adicionar',
             backgroundColor: Colors.cyan
             )
              

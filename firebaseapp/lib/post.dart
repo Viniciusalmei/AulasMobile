@@ -20,6 +20,7 @@ class _PostClimateScreenState extends State<PostClimateScreen> {
     {
       'temperature': temp,
       'humidity': humi,
+      
     }
   );
 
@@ -53,8 +54,9 @@ class _PostClimateScreenState extends State<PostClimateScreen> {
           keyboardType: TextInputType.number,
           decoration: InputDecoration(labelText:'Insira a Umidade'),
         ),
+        ElevatedButton(onPressed: postData, child: Text('Enviar'))
 
-        
+
       ],
     )
     
