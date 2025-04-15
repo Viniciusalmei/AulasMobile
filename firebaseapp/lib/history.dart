@@ -55,7 +55,10 @@ class _ClimateHistoryScreenState extends State<ClimateHistoryScreen> {
           title: Text('Temperatura: $temperature_historico ºC'),
           subtitle: Text('Humidade $humidity_historico %'),
           leading: Icon(Icons.thermostat),
-          trailing: IconButton(onPressed: , icon: Icon(Icons.delete)),
+          trailing: IconButton(onPressed: () async {
+             await FirebaseFirestore.instance.collection('Monte Mor').doc(doc.id).delete();
+          },
+           icon: Icon(Icons.delete)),
           
           
         )

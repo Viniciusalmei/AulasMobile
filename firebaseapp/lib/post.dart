@@ -20,6 +20,7 @@ class _PostClimateScreenState extends State<PostClimateScreen> {
     {
       'temperature': temp,
       'humidity': humi,
+      'timestamp': FieldValue.serverTimestamp()
       
     }
   );

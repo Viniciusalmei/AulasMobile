@@ -42,6 +42,7 @@ class _PutClimateScreenState extends State<PutClimateScreen> {
       appBar: AppBar(title: Text('Tela de Alteração de dados')),
 
       body: Column(children: [
+        Text('Temperatura Anterior : ${widget.initialTemperature}'),
         TextField(
           controller: temperatureController, //variavel que visualiza as informacoes 
           keyboardType: TextInputType.number, //tipo de teclado para o usuario inserir dados.
