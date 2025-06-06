@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testeget/get.dart';
+import 'package:testeget/getConselhos.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,7 +72,10 @@ class HomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>GetScreen()));
-                }, child: Text('Navegar'))
+                }, child: Text('Navegar')),
+                  ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaGet()));
+                }, child: Text('Ver Conselhos '))
                 
                 
               ],
