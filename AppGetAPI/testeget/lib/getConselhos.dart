@@ -21,6 +21,7 @@ class _TelaGetState extends State<TelaGet> {
   getConselhos();
   }
 
+
   void getConselhos() async {
     final response = await http.get(Uri.parse("https://api.adviceslip.com/advice"));//variavel que pega os dados
     //da api.
@@ -48,4 +49,5 @@ class _TelaGetState extends State<TelaGet> {
     );
   }
 }
+
 
